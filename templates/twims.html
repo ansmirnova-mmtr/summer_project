@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <title> Матан </title>
+ </head>
+ <body class=" container h-100 text-center text-white bg-dark">
+
+   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="/" class="nav-link px-2 link-dark" style="font-size: 120%; font-family: monospace; color: #ffffff; text-align: right;"> Главная </a></li>
+        <li><a href="/matan" class="nav-link px-2 link-dark" style="font-size: 120%; font-family: monospace; color: #ffffff; text-align: right;"> Матан </a></li>
+        <li><a href="/acos" class="nav-link px-2 link-dark" style="font-size: 120%; font-family: monospace; color: #ffffff; text-align: right;"> Акос </a></li>
+        <li><a href="/twims" class="nav-link px-2 link-dark" style="font-size: 120%; font-family: monospace; color: #ffd800; text-align: right;"> Твимс </a></li>
+        <li><a href="/diff" class="nav-link px-2 link-dark" style="font-size: 120%; font-family: monospace; color: #ffffff; text-align: right;"> Диффуры </a></li>
+      
+      </ul>
+    </header>
+
+    <div class="py-5 text-center" >
+      <img class="d-block mx-auto mb-4" src="https://pngimg.com/uploads/calculator/calculator_PNG7939.png" alt="" width="72" height="57">
+      <h2>Правила подсчета</h2>
+      <p class="lead">Пожалуйста, заполняйте все поля. Дробные значения указывайте строго через точку.</p>
+    </div>
+   <div class = "container">
+    <center>
+    <form action="/twims" method="POST" class="needs-validation" novalidate="" >
+          <div class="row g-3">
+
+            <div class="col-sm-3" >
+              <label for="firstName" class="form-label" > Оценка за кр1 </label>
+              <input type="text" class="form-control" name="kr1">
+            </div>
+
+            <div class="col-sm-3">
+              <label for="lastName" class="form-label"> Оценка за кр2 </label>
+              <input type="text" class="form-control" placeholder="" value="" required="" name="kr2">
+            </div>
+
+            <div class="col-sm-4">
+              <label for="firstName" class="form-label"> Оценка за коллок1 </label>
+              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="" name="kl1">
+            </div>
+
+            <div class="col-sm-4">
+              <label for="lastName" class="form-label"> Оценка за коллок1 </label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="kl2">
+            </div>
+
+            <div class="col-sm-4">
+              <label for="lastName" class="form-label"> Оценка за дз </label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="dz">
+            </div>
+
+            <div class="col-sm-3">
+              <label for="lastName" class="form-label"> Оценка за экзамен </label>
+              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="" name="exam">
+            </div>
+          </div> <p>  </p>
+          <br> <p> </p>
+          <button class="w-50 btn btn-primary btn-lg" type="submit"> Посчитать </button><p> </p> <br>
+
+     </form>
+
+     {% if result %}
+    <p> Ваш предварительный итог: {{result}} </p>
+    {% endif %}
+    <p> </p> <br> <p> </p>
+    <br> <p> </p>
+     </center>
+ </div>
+ </body>
+</html>
